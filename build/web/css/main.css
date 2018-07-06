@@ -1,0 +1,343 @@
+/* ---------------- components ---------------- */
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html{
+    /* mudar para circular std */
+    font-family: "circular-std", sans-serif;
+}
+
+
+body{
+    width: 100%;
+    background: url("../images/background.jpg");
+    background-repeat: repeat-y;
+    background-clip: content-box;
+    background-size: 100%;
+}
+
+h1{
+    font-size: 48px;
+    font-weight: 100;
+    color: rgb(230, 195, 69);
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 16px;
+}
+
+.btnOutline{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    border: 2px Solid rgb(230, 195, 69);
+    border-radius: 6px;
+    width: 175px;
+    height: 53px;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 30px;
+    transition: 0.3s linear;
+}
+
+.btnOutline:hover{
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    background-color: rgb(230, 195, 69);
+    border-radius: 6px;
+    width: 175px;
+    height: 53px;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btnFilled{
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    background-color: rgb(230, 195, 69);
+    border-radius: 6px;
+    width: 175px;
+    height: 53px;
+    line-height: 53px;
+    text-align: center;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+/* ---------------- nav  ---------------- */
+
+nav{
+    display: none;
+    margin-top: -25px;
+}
+.menu{
+    
+    /* line-height: 150px;
+    text-align: right;
+    background-color: #FFF;
+    box-shadow: none;*/
+} 
+
+.menu a{
+    /* text-decoration: none;
+    color: #202427;
+    font-size: 20px;
+    font-weight: 700; */
+}
+/* 
+.menu a:first-child{
+    float:left;
+}
+
+.menu a img{
+    vertical-align: middle;
+}
+
+.menu a span{
+    background-color: #2B9DFF;
+    padding: 5px 15px;
+    border-radius: 1000px;
+    font-weight: 100;
+    color: #FFF;
+    margin-left: 7px;
+} */
+
+
+/* ---------------- header  ---------------- */
+
+header{
+    height: 1000px;
+    min-height: 1000px;
+    padding: 1px 5%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/inicial.png);
+    background-position: top right;
+}
+
+header h1{
+    width: 46%;
+    margin: 6em 0 0 0;
+}
+
+
+/* ---------------- team  ---------------- */
+.team{
+    text-align: center;
+    margin: 2em 0 25em 0;
+    padding: 0 5%;
+}
+
+.team h1{
+    width: 50%;
+    margin: 0 auto 30px auto;
+}
+
+.members{
+    display: flex;
+    justify-content: center;
+}
+
+.person{
+    margin: 0 30px;
+    color: #202427;
+}
+
+.person h3{
+    margin-bottom: 5px;
+}
+
+/* ---------------- .cadastro  ---------------- */
+.cadastro{
+    padding: 0 5%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 80%;
+    height: 900px;
+    min-height: 900px;  
+}
+
+.cadastro h1{
+    margin-bottom: 30px;
+    padding-top: 300px;
+}
+
+.icons img{
+    margin-right: 30px;
+}
+
+.cadastro h1, .icons{
+    margin-left: 50%;
+}
+
+/* ---------------- action  ---------------- */
+
+.callToAction{
+    text-align: center;
+    padding: 20em 5% 20em 5%;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background: #FFF;
+    background-position: center;
+}
+
+.callToAction h1, callToAction a {
+    display: inline-block;
+    margin: 0 60px;
+    vertical-align: middle;
+}
+
+
+
+/* ---------------- footer  ---------------- */
+
+footer{
+    padding: 0 5%;
+    margin-bottom: 40px;
+    color: rgb(230, 195, 69);
+}
+
+footer p , .footerPages{
+    display: inline-block
+}
+
+.footerPages{
+    float: right;
+}
+
+.footerPages a {
+    text-decoration: none;
+    font-weight: 100;
+    color: rgb(230, 195, 69);
+    margin-left: 30px;
+}
+
+/* ---------------- responsive  ---------------- */
+
+
+
+
+
+
+/* ---------------- scrollbar  ---------------- */
+.btn{
+    width: 135px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: rgb(230, 195, 69);
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+/* Datapiket */
+
+.date-text{
+    color: aliceblue;
+}
+
+/* background datepiker */
+.datepicker-date-display{
+    background-color: rgb(230, 195, 69);
+}
+
+.datepicker-date-display .btn-flat{
+    color: black;
+}
+
+/* timepiker */
+
+/* background timepiker */
+.timepicker-digital-display{
+    background-color: rgb(230, 195, 69);
+}
+
+.select-wrapper{
+    color: black;
+}
+
+/* radio button */
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: rgb(230, 195, 69);
+}
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid rgb(230, 195, 69);
+}
+
+.is-selected{
+    background-color: rgb(230, 195, 69);
+}
+
+/* .dropdown-content span{
+    color: rgb(230, 195, 69);
+} */
+
+/* Scrollbar */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 0px rgb(0, 0, 0);
+	border-radius: 10px;
+	background-color: rgba(255, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: rgb(236, 208, 106);
+}
+
+::-moz-scrollbar-track {
+	box-shadow: inset 0 0 0px rgb(0, 0, 0);
+	border-radius: 10px;
+	background-color: rgba(255, 0, 0, 0);
+}
+
+::-moz-scrollbar {
+	width: 8px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+::-moz-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: #2B9DFF;
+}
+
+
+.image{
+    width: 110px;
+}
+
+.svg-bg{
+    position: absolute;
+    width: 700px;
+    margin: -5% -36%;
+    z-index: -1;
+}
+
+#formulario{
+    width: 500px;
+    margin: calc(38px 377px);
+}

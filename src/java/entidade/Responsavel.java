@@ -11,22 +11,27 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @XmlRootElement
 public class Responsavel implements Serializable{
-     private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String nomeDoResponsavel, endereco, email,telefone, nomeDoAnimal;
-
+    private String endereco;
+//    multiplos emails
+    private String email;   
+//   multiplos telefones
+    private String telefone;
+//   um responsavel p/ um nome
+    private String nome;
+    
     public Responsavel() {
     }
 
     public Responsavel(Long id, String nomeDoResponsavel, String endereco, String email, String telefone, String nomeDoAnimal) {
         this.id = id;
-        this.nomeDoResponsavel = nomeDoResponsavel;
+        this.nome = nomeDoResponsavel;
         this.endereco = endereco;
         this.email = email;
         this.telefone = telefone;
-        this.nomeDoAnimal = nomeDoAnimal;
     }
 
     public Long getId() {
@@ -37,12 +42,12 @@ public class Responsavel implements Serializable{
         this.id = id;
     }
 
-    public String getNomeDoResponsavel() {
-        return nomeDoResponsavel;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeDoResponsavel(String nomeDoResponsavel) {
-        this.nomeDoResponsavel = nomeDoResponsavel;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getEndereco() {
@@ -69,13 +74,6 @@ public class Responsavel implements Serializable{
         this.telefone = telefone;
     }
 
-    public String getNomeDoAnimal() {
-        return nomeDoAnimal;
-    }
-
-    public void setNomeDoAnimal(String nomeDoAnimal) {
-        this.nomeDoAnimal = nomeDoAnimal;
-    }
     
     @Override
     public int hashCode() {
@@ -100,7 +98,7 @@ public class Responsavel implements Serializable{
 
     @Override
     public String toString() {
-        return "Responsavel{" + "id=" + id + ", nomeDoResponsavel=" + nomeDoResponsavel + ", endereco=" + endereco + ", email=" + email + ", telefone=" + telefone + ", nomeDoAnimal=" + nomeDoAnimal + '}';
+        return "Responsavel{" + "id=" + id + ", nomeDoResponsavel=" + nome + ", endereco=" + endereco + ", email=" + email + ", telefone=" + telefone + '}';
     }
     
 }

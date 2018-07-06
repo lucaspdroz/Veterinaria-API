@@ -1,16 +1,161 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>API Veterinária</div>
-    </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Veterinária</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="images/icon.ico">
+</head>
+
+<body>
+  <header>
+    <a href="agenda.html">Dashboard Vet</a>
+    <nav class="menu">
+      <!-- <a href="">
+        <img src="images/nav_icon.png" alt="nav icon">
+      </a> -->
+    </nav>
+    <h1>Seu Animal com o cuidado e carinho que ele merece</h1>
+    <a href="Animal.html" class="btnFilled">Cadastre-se já</a>
+  </header>
+
+  <div class="team">
+    <h1>Nossos Profissionais mais capacitados.</h1>
+    <div class="members">
+      <div class="person">
+        <img src="images/david_coyle_img.png" alt="profile icon">
+        <h3>Marlon Mendes</h3>
+        <p>4 Anos de
+          <br> cirurgia veterinária e pecuária</p>
+      </div>
+      <div class="person">
+        <img src="images/mary_hutton_img.png" alt="profile icon">
+        <h3>Carla Hutton</h3>
+        <p>7 Anos em
+          <br> cuidados de animais idosos</p>
+      </div>
+      <div class="person">
+        <img src="images/james_hillman_img.png" alt="profile icon">
+        <h3>Daniel Hillman</h3>
+        <p>5 Anos de Assistência
+          <br> à animais abandonados</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cadastro">
+    <form action="" method="post">
+      <div class="row">
+        <div class="col s12 center">
+          <h3>Faça seu Agendamento</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m6 l3 center pet-status">
+          <img class="svg-bg" src="images/Subtract.svg" onerror="this.onerror=null; this.src='image.png'">
+          <img class="image" src="images/image.png" alt="">
+          <p>Nome do pet</p>
+          <h5>Piti</h5>
+          <p>6 meses</p>
+        </div>
+
+        <div class="marginExtra">
+          <div class="col s12 m6 l3">
+            <input type="text" class="datepicker" placeholder="Data" required>
+          </div>
+          <div class="col s12 m6 l3">
+            <input type="text" class="timepicker" placeholder="Horário" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m12 l6 center">
+            <div class="input-field">
+              <select class="black" required>
+                <option value="" disabled selected>Escolha uma opção</option>
+                <option class="black" value="1">Banho</option>
+                <option value="2">Tosa</option>
+                <option value="3">Veterinário </option>
+              </select>
+              <label>Procedimento</label>
+            </div>
+            <div class="row">
+              <div class="col s12 m12 l12">
+                <p class="center">Porte:</p>
+                <div class="center">
+                  <label>
+                    <input name="porte" type="radio" value="P" />
+                    <span>Pequeno</span>
+                  </label>
+
+                  <label>
+                    <input name="porte" type="radio" value="M" />
+                    <span>Médio</span>
+                  </label>
+
+                  <label>
+                    <input name="porte" type="radio" value="G" />
+                    <span>Grande</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="s12 center">
+                <button class="waves-effect waves-dark btn">
+                  <i class="material-icons left">pets</i> Agendar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="result"></div>
+
+  <div class="callToAction">
+    <h1>Venha vivenciar conosco</h1>
+    <a href="Animal.html" class="btnOutline" >Cadastre-se Já</a>
+  </div>
+  
+  <footer>
+    <p>&copy; 2018 Clínica Veterinária</p>
+    <div class="footerPages">
+      <a href="">Home</a>
+      <a href="">Serviços</a>
+      <a href="">Montlhy</a>
+      <a href="">Termos</a>
+    </div>
+  </footer>
+</body>
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+    $('.datepicker').datepicker({
+      format: 'dd/mm/yyyy',
+    });
+  });
+
+  $(document).ready(function () {
+    $('select').formSelect();
+  });
+
+  $(document).ready(function () {
+    $('.timepicker').timepicker();
+  });
+
+  $(".btn").click(function () {
+    alert("Chama Ajax");
+  });
+</script>
+
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/icon.ico">
+    <title>Dashboard</title>
+    <style>
+        main{
+            margin: 15px;
+            width: 900px;
+        }
+
+        form{
+            margin: 25px;
+            margin-left: 45%;
+            width: 400px;
+        }
+
+         .btnFilled {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form id="formulario" method="post">
+            horario:
+            <input id="data" type="text" class="datepicker" placeholder="Data" required>
+            data:
+            <input id="hora" type="text" class="timepicker" placeholder="Horário" required>
+            descricao
+            <input id="descricao" type="text">
+            <select id="status">
+                <option value="banho" selected>banho</option>
+                <option value="veterinario">veterinario</option>
+                <option value="outro">Outro</option>
+            </select>
+            <input class="btnFilled" type="submit" value="enviar">
+        </form>
+        <table>
+
+        </table>
+
+    </main>
+
+
+</body>
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $('.datepicker').datepicker({
+            format: 'dd/mm/yyyy',
+        });
+    });
+
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+
+    $(document).ready(function () {
+        $('.timepicker').timepicker();
+    });
+
+    $(".btn").click(function () {
+        alert("Chama Ajax");
+    });
+</script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/agenda.js"></script>
+</html>

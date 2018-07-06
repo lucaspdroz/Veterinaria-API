@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
@@ -13,21 +14,27 @@ public class Animal implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String nome, idade, vacinas,porte,nomeDoResponsavel;
+    private String nomeDoAnimal; 
+    private String idade;
+//    UM Animal p/ multiplas vacinas
+    private String vacinas;
+//    um animal p/ um porte
+    private String porte;
+//    Um Animal para mais responsaveis
+    @ManyToOne
+    private Responsavel responsavel;
 
+    public Responsavel getResponsavel() {
+        return responsavel;
+    }
+
+    public void setResponsavel(Responsavel responsavel) {
+        this.responsavel = responsavel;
+    }
+    
     public Animal() {
     }
     
-    
-
-    public Animal(Long id, String nome, String idade, String vacinas, String porte, String nomeDoResponsavel) {
-        this.id = id;
-        this.nome = nome;
-        this.idade = idade;
-        this.vacinas = vacinas;
-        this.porte = porte;
-        this.nomeDoResponsavel = nomeDoResponsavel;
-    }
 
     public Long getId() {
         return id;
@@ -38,11 +45,11 @@ public class Animal implements Serializable {
     }
 
     public String getNome() {
-        return nome;
+        return nomeDoAnimal;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nomeDoAnimal = nome;
     }
 
     public String getIdade() {
@@ -69,15 +76,6 @@ public class Animal implements Serializable {
         this.porte = porte;
     }
 
-    public String getNomeDoResponsavel() {
-        return nomeDoResponsavel;
-    }
-
-    public void setNomeDoResponsavel(String nomeDoResponsavel) {
-        this.nomeDoResponsavel = nomeDoResponsavel;
-    }
-    
-    
     @Override
     public int hashCode() {
         int hash = 0;
@@ -102,9 +100,6 @@ public class Animal implements Serializable {
 
     @Override
     public String toString() {
-        return "Animal{" + "id=" + id + ", nome=" + nome + ", idade=" + idade + ", vacinas=" + vacinas + ", porte=" + porte + ", nomeDoResponsavel=" + nomeDoResponsavel + '}';
+        return "Animal{" + "id=" + id + ", nome=" + nomeDoAnimal + ", idade=" + idade + ", vacinas=" + vacinas + ", porte=" + porte + ", nomeDoResponsavel=" + responsavel + '}';
     }
-    
-    
-    
 }

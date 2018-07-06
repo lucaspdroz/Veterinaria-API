@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 
@@ -15,8 +16,10 @@ public class Agenda implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String data, descricao, status;
-
+    private String data;
+    private String descricao;
+    private String status;
+                
     public Agenda() {
     }
     

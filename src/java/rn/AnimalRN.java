@@ -64,8 +64,7 @@ public class AnimalRN {
 
     }
 
-    public List<Animal> listar() {
-        
+    public List<Animal> listar() {  
         
         EntityManager manager = JPAUtil.createManager();
         
